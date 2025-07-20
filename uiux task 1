@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Create Account</title>
+  <style>
+    :root {
+      --background: #f4f4f9;
+      --text: #333;
+      --primary: #4a90e2;
+      --border: #ccc;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: var(--background);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      background: #fff;
+      padding: 30px;
+      max-width: 420px;
+      width: 100%;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      border-radius: 12px;
+      color: var(--text);
+      position: relative;
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      color: var(--primary);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+    }
+
+    .checkbox-group {
+      margin-bottom: 1rem;
+      font-size: 0.9em;
+    }
+
+    .checkbox-group input {
+      margin-right: 8px;
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 10px;
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 1em;
+      cursor: pointer;
+    }
+
+    .submit-btn:hover {
+      background-color: #357abd;
+    }
+
+    .login-link {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.9em;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Create Your Account</h2>
+    <form>
+      <label for="name">Full Name *</label>
+      <input type="text" id="name" name="name" placeholder="John Doe" required />
+
+      <label for="email">Email Address *</label>
+      <input type="email" id="email" name="email" placeholder="john@example.com" required />
+
+      <label for="location">Location</label>
+      <input type="text" id="location" name="location" placeholder="City, Country" />
+
+      <label for="password">Password *</label>
+      <input type="password" id="password" name="password" placeholder="••••••••" required />
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="terms" required />
+        <label for="terms">I agree to the Terms & Conditions</label>
+      </div>
+
+      <button type="submit" class="submit-btn">Sign Up</button>
+
+      <div class="login-link">
+        Already have an account? <a href="#">Log in</a>
+      </div>
+    </form>
+  </div>
+</body>
+</html>
