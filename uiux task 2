@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Restaurant Menu</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background: #fff8f0;
+      color: #333;
+      padding: 30px;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      color: #d35400;
+    }
+
+    .demo-button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 10px 20px;
+      background: #e67e22;
+      color: white;
+      text-decoration: none;
+      border-radius: 6px;
+      transition: background 0.3s ease;
+    }
+
+    .demo-button:hover {
+      background: #cf711f;
+    }
+
+    .menu {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .category {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .category:hover {
+      transform: scale(1.02);
+    }
+
+    .category h2 {
+      font-size: 1.8rem;
+      color: #c0392b;
+      border-bottom: 2px solid #f1c40f;
+      margin-bottom: 15px;
+      padding-bottom: 5px;
+    }
+
+    .item {
+      margin-bottom: 15px;
+    }
+
+    .item h3 {
+      font-size: 1.2rem;
+      color: #2c3e50;
+      margin-bottom: 5px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .item p {
+      font-size: 0.95rem;
+      color: #7f8c8d;
+    }
+
+    .price {
+      color: #27ae60;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 40px;
+      color: #aaa;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <h1>Our Delicious Menu</h1>
+    <a href="#" class="demo-button">FOR DEMO CLICK HERE</a>
+  </header>
+
+  <!-- Menu Categories -->
+  <section class="menu">
+    
+    <!-- Starters -->
+    <div class="category">
+      <h2>Starters</h2>
+      <div class="item">
+        <h3>Garlic Bread <span class="price">$4.99</span></h3>
+        <p>Toasted bread with fresh garlic and herbs.</p>
+      </div>
+      <div class="item">
+        <h3>Tomato Soup <span class="price">$5.49</span></h3>
+        <p>Rich and creamy tomato soup served with croutons.</p>
+      </div>
+      <div class="item">
+        <h3>Spring Rolls <span class="price">$6.29</span></h3>
+        <p>Stuffed with fresh veggies, served with chili dip.</p>
+      </div>
+      <div class="item">
+        <h3>Stuffed Mushrooms <span class="price">$7.25</span></h3>
+        <p>Grilled mushrooms filled with cheese and herbs.</p>
+      </div>
+    </div>
+
+    <!-- Main Course -->
+    <div class="category">
+      <h2>Main Course</h2>
+      <div class="item">
+        <h3>Grilled Chicken <span class="price">$12.99</span></h3>
+        <p>Succulent grilled chicken breast with herb butter.</p>
+      </div>
+      <div class="item">
+        <h3>Veggie Lasagna <span class="price">$11.49</span></h3>
+        <p>Layered pasta with seasonal vegetables and cheese.</p>
+      </div>
+      <div class="item">
+        <h3>Paneer Tikka Masala <span class="price">$10.75</span></h3>
+        <p>Paneer cubes cooked in rich tomato cream curry.</p>
+      </div>
+      <div class="item">
+        <h3>Butter Chicken <span class="price">$13.49</span></h3>
+        <p>Classic Indian dish with buttery tomato gravy.</p>
+      </div>
+    </div>
+
+    <!-- Desserts -->
+    <div class="category">
+      <h2>Desserts</h2>
+      <div class="item">
+        <h3>Chocolate Lava Cake <span class="price">$6.99</span></h3>
+        <p>Warm chocolate cake with gooey center.</p>
+      </div>
+      <div class="item">
+        <h3>Vanilla Ice Cream <span class="price">$3.99</span></h3>
+        <p>Classic vanilla scoop with caramel drizzle.</p>
+      </div>
+      <div class="item">
+        <h3>Fruit Custard <span class="price">$4.50</span></h3>
+        <p>Seasonal fruits in a creamy vanilla custard.</p>
+      </div>
+      <div class="item">
+        <h3>Brownie Sundae <span class="price">$5.99</span></h3>
+        <p>Brownie topped with ice cream and hot fudge.</p>
+      </div>
+    </div>
+
+    <!-- Beverages -->
+    <div class="category">
+      <h2>Beverages</h2>
+      <div class="item">
+        <h3>Lemon Iced Tea <span class="price">$2.99</span></h3>
+        <p>Refreshing and chilled lemon flavored tea.</p>
+      </div>
+      <div class="item">
+        <h3>Cold Coffee <span class="price">$3.49</span></h3>
+        <p>Chilled coffee blended with milk and ice cream.</p>
+      </div>
+      <div class="item">
+        <h3>Mango Smoothie <span class="price">$3.99</span></h3>
+        <p>Fresh mango blended with yogurt and ice.</p>
+      </div>
+      <div class="item">
+        <h3>Virgin Mojito <span class="price">$4.25</span></h3>
+        <p>Minty lime soda, refreshing and bubbly.</p>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    Designed for user-friendly browsing &mdash; Easy, categorized & visually appealing!
+  </footer>
+
+</body>
+</html>
